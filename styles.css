@@ -159,7 +159,9 @@ ul {
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(224, 218, 206, 0.5);
 }
-
+#download-buttons {
+  scroll-margin-top: 120px;
+}
 .navbar-inner {
   display: flex;
   align-items: center;
