@@ -3,313 +3,641 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lumyn – Build Consistent Scripture Habits</title>
-
+    <meta name="theme-color" content="#f5f0e8" />
+    <title>Lumyn &ndash; Build Consistent Scripture Habits</title>
     <meta
       name="description"
-      content="Lumyn helps you build consistent Scripture habits through reading streaks, reminders, and community accountability."
+      content="Lumyn helps you build consistent Scripture habits through reading streaks, reminders, and community accountability. Available on iOS and Android."
     />
-
-    <style>
-      body {
-        margin: 0;
-        font-family:
-          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
-          Arial, sans-serif;
-        background: #ffffff;
-        color: #111;
-        line-height: 1.6;
-      }
-
-      .container {
-        max-width: 1100px;
-        margin: 0 auto;
-        padding: 0 24px;
-      }
-
-      /* NAVBAR */
-      nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 20px 0;
-      }
-
-      .logo {
-        font-weight: 600;
-        font-size: 20px;
-      }
-
-      .nav-links a {
-        margin-left: 24px;
-        text-decoration: none;
-        color: #111;
-        font-size: 15px;
-      }
-
-      .nav-links a:hover {
-        opacity: 0.6;
-      }
-
-      /* HERO */
-      .hero {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 60px;
-        padding: 100px 0 80px;
-        flex-wrap: wrap;
-      }
-
-      .hero-text {
-        flex: 1;
-        min-width: 280px;
-      }
-
-      .hero-text h1 {
-        font-size: 44px;
-        margin-bottom: 16px;
-      }
-
-      .hero-text span {
-        color: #3b82f6;
-      }
-
-      .hero-text p {
-        font-size: 18px;
-        color: #555;
-        margin-bottom: 32px;
-        max-width: 500px;
-      }
-
-      .hero-image {
-        flex: 1;
-        text-align: center;
-      }
-
-      .hero-image img {
-        width: 280px;
-        border-radius: 28px;
-        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12);
-      }
-      @media (max-width: 768px) {
-        .hero {
-          flex-direction: column;
-          text-align: center;
-        }
-
-        .hero-text p {
-          margin-left: auto;
-          margin-right: auto;
-        }
-
-        .hero-image img {
-          width: 220px;
-          margin-top: 30px;
-        }
-      }
-      .buttons {
-        display: flex;
-        justify-content: center;
-        gap: 16px;
-        flex-wrap: wrap;
-      }
-
-      .button {
-        padding: 14px 24px;
-        border-radius: 8px;
-        text-decoration: none;
-        font-weight: 600;
-        transition: 0.2s ease;
-      }
-
-      .primary {
-        background: #111;
-        color: #fff;
-      }
-
-      .secondary {
-        border: 1px solid #111;
-        color: #111;
-      }
-
-      .button:hover {
-        opacity: 0.85;
-      }
-
-      /* FEATURES */
-      .feature {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 60px;
-        padding: 80px 0;
-        flex-wrap: wrap;
-      }
-
-      .feature.reverse {
-        flex-direction: row-reverse;
-      }
-
-      .feature-text {
-        flex: 1;
-        min-width: 280px;
-      }
-
-      .feature-text h2 {
-        font-size: 28px;
-        margin-bottom: 12px;
-      }
-
-      .feature-text p {
-        color: #555;
-        font-size: 16px;
-      }
-
-      .feature-image {
-        flex: 1;
-        text-align: center;
-      }
-
-      .feature-image img {
-        width: 260px;
-        border-radius: 24px;
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
-      }
-
-      /* FOOTER */
-      footer {
-        border-top: 1px solid #eee;
-        margin-top: 80px;
-        padding: 40px 0;
-        text-align: center;
-        font-size: 14px;
-        color: #777;
-      }
-
-      footer a {
-        color: #111;
-        text-decoration: none;
-        margin: 0 12px;
-      }
-
-      footer a:hover {
-        text-decoration: underline;
-      }
-
-      @media (max-width: 768px) {
-        .hero h1 {
-          font-size: 32px;
-        }
-
-        .feature {
-          padding: 60px 0;
-        }
-
-        .feature-image img {
-          width: 200px;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="/styles.css" />
   </head>
 
   <body>
-    <div class="container">
-      <!-- NAVIGATION -->
-      <nav>
-        <div class="logo">Lumyn</div>
-        <div class="nav-links">
-          <a href="#features">Features</a>
-          <a href="#download">Download</a>
-        </div>
-      </nav>
+    <!-- ========================================
+         NAVBAR
+         ======================================== -->
+    <header class="navbar">
+      <div class="container">
+        <nav class="navbar-inner" aria-label="Main navigation">
+          <!-- Logo -->
+          <a href="/" class="logo-link" aria-label="Lumyn home">
+            <img
+              src="/assets/lumyn-transparent 2.png"
+              alt="Lumyn logo"
+              class="logo-image"
+            />
+            <span class="logo-text">Lumyn</span>
+          </a>
 
-      <!-- HERO SECTION -->
+          <!-- Desktop nav links -->
+          <div class="nav-links-desktop">
+            <a href="#features" class="nav-link">Features</a>
+            <!-- <a href="#testimonials" class="nav-link">Community</a> -->
+            <a href="#download-buttons" class="btn btn-primary nav-download-btn"
+              >Download</a
+            >
+          </div>
+
+          <!-- Mobile hamburger -->
+          <button
+            class="mobile-toggle"
+            id="mobile-toggle"
+            aria-expanded="false"
+            aria-label="Toggle menu"
+          >
+            <svg id="menu-icon" viewBox="0 0 24 24">
+              <line x1="3" y1="6" x2="21" y2="6" />
+              <line x1="3" y1="12" x2="21" y2="12" />
+              <line x1="3" y1="18" x2="21" y2="18" />
+            </svg>
+            <svg id="close-icon" viewBox="0 0 24 24" style="display: none">
+              <line x1="18" y1="6" x2="6" y2="18" />
+              <line x1="6" y1="6" x2="18" y2="18" />
+            </svg>
+          </button>
+        </nav>
+
+        <!-- Mobile menu -->
+        <div class="mobile-menu" id="mobile-menu">
+          <div class="mobile-menu-links">
+            <a href="#features">Features</a>
+            <a href="#how-it-works">How It Works</a>
+            <!-- <a href="#testimonials">Community</a> -->
+            <a href="#download" class="btn btn-primary">Download</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- ========================================
+           HERO SECTION
+           ======================================== -->
       <section class="hero">
-        <div class="hero-text">
-          <h1>Read Scripture. <span>Stay Consistent.</span></h1>
+        <div class="container">
+          <div class="hero-inner">
+            <!-- Text content -->
+            <div class="hero-content">
+              <!-- Badge -->
+              <!-- <div class="hero-badge">
+                <span class="hero-badge-dot" aria-hidden="true"></span>
+                Now available on iOS &amp; Android
+              </div> -->
 
-          <p>
-            Lumyn helps you build daily Bible reading habits through streaks,
-            reminders, and community accountability.
-          </p>
+              <h1>
+                Read Scripture.
+                <span class="accent-text">Stay Consistent.</span>
+              </h1>
 
-          <div class="buttons" id="download">
-            <a
-              class="button primary"
-              href="https://apps.apple.com/"
-              target="_blank"
-            >
-              Download on App Store
-            </a>
-            <a
-              class="button secondary"
-              href="https://play.google.com/"
-              target="_blank"
-            >
-              Get it on Google Play
-            </a>
+              <p class="hero-description">
+                Build a daily Scripture habit with streaks, reminders and
+                community accountability.
+              </p>
+
+              <!-- CTAs -->
+              <div class="hero-buttons" id="download-buttons">
+                <a
+                  href="https://apps.apple.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="store-button"
+                >
+                  <img
+                    src="/assets/appStoreBadge.svg"
+                    alt="Download on the App Store"
+                  />
+                </a>
+
+                <a
+                  href="https://play.google.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="store-button"
+                >
+                  <img
+                    src="/assets/googleStoreBadge.svg"
+                    alt="Get it on Google Play"
+                  />
+                </a>
+              </div>
+
+              <!-- Social proof -->
+              <!-- <div class="hero-social-proof">
+                <div class="avatar-stack" aria-hidden="true">
+                  <div class="avatar">A</div>
+                  <div class="avatar">B</div>
+                  <div class="avatar">C</div>
+                  <div class="avatar">D</div>
+                </div>
+                <p>
+                  <strong>2,400+</strong> readers building daily habits
+                </p>
+              </div> -->
+            </div>
+
+            <!-- Hero image -->
+            <div class="hero-image-wrapper">
+              <div class="hero-glow" aria-hidden="true"></div>
+
+              <div class="image-loader">
+                <img
+                  src="/assets/progressExpanded.png"
+                  alt="Lumyn app dashboard showing reading progress and daily streak counter"
+                  width="340"
+                  height="680"
+                  onload="this.parentElement.classList.add('loaded')"
+                />
+              </div>
+            </div>
           </div>
-        </div>
-
-        <div class="hero-image">
-          <img src="/images/hero.png" alt="Lumyn App Screenshot" />
         </div>
       </section>
-      <!-- FEATURES -->
-      <section id="features">
-        <!-- Feature 1 -->
-        <div class="feature">
-          <div class="feature-text">
-            <h2>Track Your Reading</h2>
-            <p>
-              Log chapters at your own pace and see exactly which books you’ve
-              completed. Stay grounded in steady, consistent progress.
-            </p>
-          </div>
-          <div class="feature-image">
-            <img src="/images/reading.png" alt="Reading screen" />
+
+      <!-- ========================================
+           STATS BAR
+           ======================================== -->
+      <!-- <section class="stats-bar" aria-label="App statistics">
+        <div class="container">
+          <div class="stats-grid">
+            <div class="stat-item">
+              <svg class="stat-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20" />
+              </svg>
+              <p class="stat-value">1.2M+</p>
+              <p class="stat-label">Chapters Read</p>
+            </div>
+            <div class="stat-item">
+              <svg class="stat-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"
+                />
+              </svg>
+              <p class="stat-value">89%</p>
+              <p class="stat-label">Users Keep Their Streak</p>
+            </div>
+            <div class="stat-item">
+              <svg class="stat-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                <circle cx="9" cy="7" r="4" />
+                <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+              </svg>
+              <p class="stat-value">2,400+</p>
+              <p class="stat-label">Active Community Members</p>
+            </div>
           </div>
         </div>
+      </section> -->
 
-        <!-- Feature 2 -->
-        <div class="feature reverse">
-          <div class="feature-text">
-            <h2>Build Daily Streaks</h2>
-            <p>
-              Protect your streak and develop lasting spiritual discipline
-              through simple, focused daily habits.
+      <!-- ========================================
+           FEATURES SECTION
+           ======================================== -->
+      <section class="features-section" id="features">
+        <div class="container">
+          <!-- Section header -->
+          <div class="section-header">
+            <p class="section-label">Features</p>
+            <h2 class="section-title">
+              Everything you need to build a lasting habit
+            </h2>
+            <p class="section-description">
+              Simple tools to help you stay consistent in Scripture.
             </p>
           </div>
-          <div class="feature-image">
-            <img src="/images/streak.png" alt="Streak screen" />
-          </div>
-        </div>
 
-        <!-- Feature 3 -->
-        <div class="feature">
-          <div class="feature-text">
-            <h2>Grow in Community</h2>
-            <p>
-              Follow friends, share reflections, and stay accountable in a
-              faith-centred environment.
-            </p>
-          </div>
-          <div class="feature-image">
-            <img src="/images/community.png" alt="Community screen" />
+          <!-- Feature rows -->
+          <div class="feature-rows">
+            <!-- Feature 1: Reading -->
+            <div class="feature-row bg-warm">
+              <div class="feature-row-inner">
+                <div class="feature-text">
+                  <!-- <div class="feature-badge">
+                    <svg
+                      class="feature-badge-icon"
+                      viewBox="0 0 24 24"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"
+                      />
+                    </svg>
+                    Track Progress
+                  </div> -->
+                  <h3 class="feature-title">Track Your Reading Progress</h3>
+                  <p class="feature-description">
+                    Log chapters and track your progress through every book of
+                    the Bible.
+                  </p>
+                  <!-- <ul class="feature-highlights" role="list">
+                    <li class="feature-highlight">
+                      <svg
+                        class="check-icon"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                      >
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                        <polyline points="22 4 12 14.01 9 11.01" />
+                      </svg>
+                      Track every chapter you read
+                    </li>
+                    <li class="feature-highlight">
+                      <svg
+                        class="check-icon"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                      >
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                        <polyline points="22 4 12 14.01 9 11.01" />
+                      </svg>
+                      See book-by-book progress
+                    </li>
+                    <li class="feature-highlight">
+                      <svg
+                        class="check-icon"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                      >
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                        <polyline points="22 4 12 14.01 9 11.01" />
+                      </svg>
+                      Set your own daily reading goals
+                    </li>
+                  </ul> -->
+                </div>
+                <div class="feature-image">
+                  <div class="image-loader">
+                    <img
+                      src="/assets/logReading.png"
+                      alt="Lumyn app reading tracker showing Bible book progress with completion bars"
+                      width="300"
+                      height="600"
+                      onload="this.parentElement.classList.add('loaded')"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Feature 2: Streaks (reversed) -->
+            <div class="feature-row reverse bg-sage">
+              <div class="feature-row-inner">
+                <div class="feature-text">
+                  <!-- <div class="feature-badge">
+                    <svg
+                      class="feature-badge-icon"
+                      viewBox="0 0 24 24"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"
+                      />
+                    </svg>
+                    Stay Motivated
+                  </div> -->
+                  <h3 class="feature-title">Build Daily Streaks</h3>
+                  <p class="feature-description">
+                    Build a daily reading streak and stay consistent with smart
+                    reminders.
+                  </p>
+                  <!-- <ul class="feature-highlights" role="list">
+                    <li class="feature-highlight">
+                      <svg
+                        class="check-icon"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                      >
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                        <polyline points="22 4 12 14.01 9 11.01" />
+                      </svg>
+                      Daily reading streak counter
+                    </li>
+                    <li class="feature-highlight">
+                      <svg
+                        class="check-icon"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                      >
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                        <polyline points="22 4 12 14.01 9 11.01" />
+                      </svg>
+                      Smart reminders at your best time
+                    </li>
+                    <li class="feature-highlight">
+                      <svg
+                        class="check-icon"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                      >
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                        <polyline points="22 4 12 14.01 9 11.01" />
+                      </svg>
+                      Weekly and monthly milestones
+                    </li>
+                  </ul> -->
+                </div>
+                <div class="feature-image">
+                  <div class="image-loader">
+                    <img
+                      src="/assets/profilePage.png"
+                      alt="Lumyn app streak screen showing a 42-day reading streak with weekly calendar view"
+                      width="300"
+                      height="600"
+                      onload="this.parentElement.classList.add('loaded')"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Feature 3: Community -->
+            <div class="feature-row bg-sky">
+              <div class="feature-row-inner">
+                <div class="feature-text">
+                  <!-- <div class="feature-badge">
+                    <svg
+                      class="feature-badge-icon"
+                      viewBox="0 0 24 24"
+                      aria-hidden="true"
+                    >
+                      <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                      <circle cx="9" cy="7" r="4" />
+                      <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                      <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                    </svg>
+                    Grow Together
+                  </div> -->
+                  <h3 class="feature-title">Grow in Community</h3>
+                  <p class="feature-description">
+                    Share reflections with your friends, follow their progress
+                    and grow together in community.
+                  </p>
+                  <!-- <ul class="feature-highlights" role="list">
+                    <li class="feature-highlight">
+                      <svg
+                        class="check-icon"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                      >
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                        <polyline points="22 4 12 14.01 9 11.01" />
+                      </svg>
+                      Follow friends and reading partners
+                    </li>
+                    <li class="feature-highlight">
+                      <svg
+                        class="check-icon"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                      >
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                        <polyline points="22 4 12 14.01 9 11.01" />
+                      </svg>
+                      Share reflections and highlights
+                    </li>
+                    <li class="feature-highlight">
+                      <svg
+                        class="check-icon"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                      >
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                        <polyline points="22 4 12 14.01 9 11.01" />
+                      </svg>
+                      Join reading groups for accountability
+                    </li>
+                  </ul> -->
+                </div>
+                <div class="feature-image">
+                  <div class="image-loader">
+                    <img
+                      src="/assets/homePage.png"
+                      alt="Lumyn app community feed showing shared reflections from other readers"
+                      width="300"
+                      height="600"
+                      onload="this.parentElement.classList.add('loaded')"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      <!-- FOOTER -->
-      <footer>
-        <div>© 2026 Lumyn</div>
-        <div style="margin-top: 10px">
-          <a href="/privacy/">Privacy Policy</a>
-          <a href="/terms/">Terms of Service</a>
-          <a href="/contact/">Contact Support</a>
+      <!-- ========================================
+           TESTIMONIALS
+           ======================================== -->
+      <!-- <section class="testimonials-section" id="testimonials">
+        <div class="container">
+          <div class="section-header">
+            <p class="section-label">Community</p>
+            <h2 class="section-title">Loved by readers everywhere</h2>
+            <p class="section-description">
+              Join thousands of people who are building lasting Scripture habits
+              with Lumyn.
+            </p>
+          </div>
+
+          <div class="testimonials-grid">
+            <figure class="testimonial-card">
+              <div class="testimonial-stars" aria-label="5 out of 5 stars">
+                <svg class="star-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                  />
+                </svg>
+                <svg class="star-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                  />
+                </svg>
+                <svg class="star-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                  />
+                </svg>
+                <svg class="star-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                  />
+                </svg>
+                <svg class="star-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                  />
+                </svg>
+              </div>
+              <blockquote class="testimonial-quote">
+                &ldquo;Lumyn completely transformed my quiet time. The streak
+                feature keeps me accountable, and I love seeing my progress grow
+                week by week.&rdquo;
+              </blockquote>
+              <figcaption class="testimonial-author">
+                <div class="author-avatar">S</div>
+                <div>
+                  <p class="author-name">Sarah M.</p>
+                  <p class="author-role">Daily reader for 6 months</p>
+                </div>
+              </figcaption>
+            </figure>
+
+            <figure class="testimonial-card">
+              <div class="testimonial-stars" aria-label="5 out of 5 stars">
+                <svg class="star-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                  />
+                </svg>
+                <svg class="star-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                  />
+                </svg>
+                <svg class="star-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                  />
+                </svg>
+                <svg class="star-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                  />
+                </svg>
+                <svg class="star-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                  />
+                </svg>
+              </div>
+              <blockquote class="testimonial-quote">
+                &ldquo;Our small group uses Lumyn to stay connected between
+                meetings. The shared reflections feature has deepened our
+                conversations so much.&rdquo;
+              </blockquote>
+              <figcaption class="testimonial-author">
+                <div class="author-avatar">D</div>
+                <div>
+                  <p class="author-name">David K.</p>
+                  <p class="author-role">Community group leader</p>
+                </div>
+              </figcaption>
+            </figure>
+
+            <figure class="testimonial-card">
+              <div class="testimonial-stars" aria-label="5 out of 5 stars">
+                <svg class="star-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                  />
+                </svg>
+                <svg class="star-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                  />
+                </svg>
+                <svg class="star-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                  />
+                </svg>
+                <svg class="star-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                  />
+                </svg>
+                <svg class="star-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                  />
+                </svg>
+              </div>
+              <blockquote class="testimonial-quote">
+                &ldquo;I tried so many apps before Lumyn. This one just works.
+                It's simple, beautiful, and doesn't overwhelm me with features I
+                don't need.&rdquo;
+              </blockquote>
+              <figcaption class="testimonial-author">
+                <div class="author-avatar">R</div>
+                <div>
+                  <p class="author-name">Rachel T.</p>
+                  <p class="author-role">New to daily Bible reading</p>
+                </div>
+              </figcaption>
+            </figure>
+          </div>
         </div>
-      </footer>
-    </div>
+      </section> -->
+    </main>
+
+    <!-- ========================================
+         FOOTER
+         ======================================== -->
+    <footer class="site-footer" role="contentinfo">
+      <div class="container">
+        <div class="footer-inner">
+          <!-- Brand -->
+          <div class="footer-brand">
+            <a href="/" class="logo-link" aria-label="Lumyn home">
+              <img
+                src="/assets/lumyn-transparent 2.png"
+                alt="Lumyn logo"
+                class="logo-image"
+              />
+              <span class="logo-text">Lumyn</span>
+            </a>
+            <p class="footer-tagline">
+              Building consistent Scripture habits, one chapter at a time.
+            </p>
+          </div>
+
+          <!-- Footer nav -->
+          <nav class="footer-nav" aria-label="Footer navigation">
+            <a href="/privacy">Privacy Policy</a>
+            <a href="/terms">Terms of Service</a>
+            <a href="/contact">Contact Support</a>
+          </nav>
+        </div>
+      </div>
+
+      <!-- Bottom bar -->
+      <div class="footer-bottom">
+        <div class="container">
+          <p>&copy; 2026 Lumyn. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ========================================
+         MINIMAL JAVASCRIPT (mobile menu toggle)
+         ======================================== -->
+    <script>
+      (function () {
+        var toggle = document.getElementById("mobile-toggle");
+        var menu = document.getElementById("mobile-menu");
+        var menuIcon = document.getElementById("menu-icon");
+        var closeIcon = document.getElementById("close-icon");
+
+        if (toggle && menu) {
+          toggle.addEventListener("click", function () {
+            var isOpen = menu.classList.contains("open");
+            menu.classList.toggle("open");
+            toggle.setAttribute("aria-expanded", String(!isOpen));
+            menuIcon.style.display = isOpen ? "block" : "none";
+            closeIcon.style.display = isOpen ? "none" : "block";
+          });
+
+          // Close on link click
+          var links = menu.querySelectorAll("a");
+          for (var i = 0; i < links.length; i++) {
+            links[i].addEventListener("click", function () {
+              menu.classList.remove("open");
+              toggle.setAttribute("aria-expanded", "false");
+              menuIcon.style.display = "block";
+              closeIcon.style.display = "none";
+            });
+          }
+        }
+      })();
+    </script>
   </body>
 </html>
