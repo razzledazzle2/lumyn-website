@@ -1114,3 +1114,19 @@ ul {
   color: #666;
   font-size: 14px;
 }
+
+
+/* Terms summary card */
+
+.legal-card {
+  border: 1px solid #e6e6e6;
+  border-radius: 12px;
+  padding: 18px;
+  margin: 20px 0 28px;
+  background: #fafafa;
+}
+
+.legal-label {
+  font-weight: 600;
+  margin-bottom: 8px;
+}
