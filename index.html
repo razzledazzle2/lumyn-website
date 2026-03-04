@@ -4,11 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#f5f0e8" />
-    <title>Lumyn &ndash; Build Consistent Scripture Habits</title>
+    <title>Lumyn &ndash; Read Scripture. Grow Together</title>
     <meta
       name="description"
-      content="Lumyn helps you build consistent Scripture habits through reading streaks, reminders, and community accountability. Available on iOS and Android."
+      content="Lumyn helps you stay consistent reading the Bible with daily streaks, reflections, reminders, and community accountability."
     />
+    <meta
+      property="og:title"
+      content="Lumyn — Read Scripture. Grow Together."
+    />
+    <meta
+      property="og:description"
+      content="Track your Bible reading, build daily streaks, and grow in Scripture alongside friends."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://getlumyn.app" />
     <link rel="stylesheet" href="/styles.css" />
   </head>
 
@@ -61,9 +71,11 @@
         <div class="mobile-menu" id="mobile-menu">
           <div class="mobile-menu-links">
             <a href="#features">Features</a>
-            <a href="#how-it-works">How It Works</a>
+            <!-- <a href="#how-it-works">How It Works</a> -->
             <!-- <a href="#testimonials">Community</a> -->
-            <a href="#download" class="btn btn-primary">Download</a>
+            <a href="#download-buttons" class="btn btn-primary nav-download-btn"
+              >Download</a
+            >
           </div>
         </div>
       </div>
@@ -85,13 +97,12 @@
               </div> -->
 
               <h1>
-                Read Scripture.
-                <span class="accent-text">Stay Consistent.</span>
+                Read Scripture.<br />
+                <span class="accent-text">Grow Together.</span>
               </h1>
-
               <p class="hero-description">
-                Build a daily Scripture habit with streaks, reminders and
-                community accountability.
+                Track your Bible reading, build daily streaks and reflect on
+                what you read alongside friends.
               </p>
 
               <!-- CTAs -->
@@ -225,8 +236,8 @@
                   </div> -->
                   <h3 class="feature-title">Track Your Reading Progress</h3>
                   <p class="feature-description">
-                    Log chapters and track your progress through every book of
-                    the Bible.
+                    Log chapters, write reflections and see your progress as you
+                    read.
                   </p>
                   <!-- <ul class="feature-highlights" role="list">
                     <li class="feature-highlight">
@@ -368,8 +379,8 @@
                   </div> -->
                   <h3 class="feature-title">Grow in Community</h3>
                   <p class="feature-description">
-                    Share reflections with your friends, follow their progress
-                    and grow together in community.
+                    Follow friends, see what they’re reading and share
+                    reflections as you grow together.
                   </p>
                   <!-- <ul class="feature-highlights" role="list">
                     <li class="feature-highlight">
@@ -636,6 +647,15 @@
               closeIcon.style.display = "none";
             });
           }
+          // close if screen resized
+          window.addEventListener("resize", function () {
+            if (window.innerWidth > 768) {
+              menu.classList.remove("open");
+              toggle.setAttribute("aria-expanded", "false");
+              menuIcon.style.display = "block";
+              closeIcon.style.display = "none";
+            }
+          });
         }
       })();
     </script>
