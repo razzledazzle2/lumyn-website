@@ -170,7 +170,7 @@ ul {
 .logo-link {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 0px;
 }
 
 .logo-icon {
@@ -182,7 +182,11 @@ ul {
   border-radius: 8px;
   background-color: var(--primary);
 }
-
+.logo-image {
+  height: 50px;
+  width: auto;
+  display: block;
+}
 .logo-icon svg {
   width: 16px;
   height: 16px;
@@ -190,7 +194,7 @@ ul {
 }
 
 .logo-text {
-  font-size: 18px;
+  font-size: 28px;
   font-weight: 600;
   letter-spacing: -0.02em;
   color: var(--foreground);
@@ -345,6 +349,11 @@ ul {
   gap: 12px;
   margin-top: 32px;
   flex-wrap: wrap;
+}
+
+.store-button img {
+  height: 52px;
+  width: auto;
 }
 
 /* Social proof mini */
@@ -569,6 +578,8 @@ ul {
   padding: 48px 24px;
   max-width: 1152px;
   margin: 0 auto;
+    justify-content: center;
+
 }
 
 .feature-row.reverse .feature-row-inner {
@@ -588,9 +599,10 @@ ul {
 }
 
 .feature-text {
-  flex: 1;
+  flex: 0 1 440px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 
 .feature-badge {
@@ -629,7 +641,6 @@ ul {
   font-size: 16px;
   line-height: 1.7;
   color: var(--muted-foreground);
-  max-width: 440px;
 }
 
 .feature-highlights {
@@ -929,7 +940,7 @@ ul {
 /* --- Footer --- */
 .site-footer {
   border-top: 1px solid rgba(224, 218, 206, 0.5);
-  background-color: var(--card);
+  background-color: var(--primary-foreground);
 }
 
 .footer-inner {
@@ -996,5 +1007,52 @@ ul {
   .footer-inner {
     flex-direction: column;
     align-items: flex-start;
+  }
+}
+
+
+/* Image loader */
+.image-loader {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+/* shimmer overlay */
+.image-loader::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    110deg,
+    transparent 20%,
+    rgba(255,255,255,0.35) 50%,
+    transparent 80%
+  );
+
+  animation: shimmer 1.6s infinite;
+}
+
+/* hide shimmer when loaded */
+.image-loader.loaded::before {
+  display: none;
+}
+
+.image-loader img {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.image-loader.loaded img {
+  opacity: 1;
+}
+
+@keyframes shimmer {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(100%);
   }
 }
