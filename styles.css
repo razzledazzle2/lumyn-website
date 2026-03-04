@@ -1060,3 +1060,57 @@ ul {
     transform: translateX(100%);
   }
 }
+
+/* other pages 
+
+/* Legal pages */
+
+.legal-page {
+  padding-top: 120px;   /* space below navbar */
+  padding-bottom: 80px;
+}
+
+.legal-container {
+  max-width: 800px;
+}
+
+/* Headings */
+
+.legal-container h1 {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.legal-container h2 {
+  font-size: 20px;
+  margin-top: 32px;
+  margin-bottom: 8px;
+}
+
+/* Text */
+
+.legal-container p {
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+/* Lists */
+
+.legal-container ul {
+  list-style: disc;
+  padding-left: 20px;
+  margin-bottom: 16px;
+}
+
+.legal-container li {
+  font-size: 15px;
+  margin-bottom: 8px;
+}
+
+/* Muted text */
+
+.legal-container .muted {
+  color: #666;
+  font-size: 14px;
+}
